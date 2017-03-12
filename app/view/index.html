@@ -20,32 +20,34 @@
       <script src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'></script>
       <script src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js'></script>
     <![endif]-->
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-default navbar-inverse" role="navigation">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Brand</a>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active">
-                <a href="#">Link</a>
-              </li>
-              <li>
-                <a href="#">Link</a>
-              </li>
-              <li class="dropdown">
+</head>
+<body data-spy="scroll" data-target="#scrollspy" data-offset="20">
+  <header area-expand="true">
+    <nav id="scrollspy" class="navbar navbar-fixed-top navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand text-danger" href="#section1">
+            <h1 class="navbar-header">Brand  </h1>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-left">
+            <li class="active hidden">
+                <a href="#section1">top</a>
+            </li>
+            <li>
+                <a href="#section2">Services</a>
+            </li>
+            <li>
+                <a href="#section3">Features</a>
+            </li>
+            <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                   <li><a href="#">Action</a></li>
@@ -57,69 +59,210 @@
                   <li><a href="#">One more separated link</a></li>
                 </ul>
               </li>
-            </ul>
-            <form class="navbar-form navbar-left" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="btn btn-xs">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="text-primary text-bold"> call to action</span>
+              </a>
+            </li>
+            <li class="divider"></li>
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-search"></span>
+              </a>
+              <ul id="search-dp" class="dropdown-menu">
+                  <li  class=" btn-group btn-group-justified">
+                    <form class="navbar-form form-horizontal" role="search">
+                      <div class="input-group col-sm-12 input-sm">
+                          <input type="text" class="form-control" placeholder="Search">
+                          <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                              <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                          </div>
+                        </div>
+                    </form>
+                  </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-log-in"></span>
+              </a>
+              <ul id="login-dp" class="dropdown-menu">
+                <li class="dropdown-header">
+                  <span>Login via</span>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="container-fluid">
+                      <div class="social-buttons pull-right">
+                        <a href="#" class="btn btn-fb" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="fa fa-facebook"></span> Facebook</a>
+                        <a href="#" class="btn btn-tw" data-toggle="tooltip" data-placement="top" title="Twitter"><span class="fa fa-twitter"></span> Twitter</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="divider"></li>
+                <li class="dropdown-header">
+                  <span>or</span>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                          <div class="form-group">
+                          <div class="input-group col-sm-12 input-sm">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            <input id="email" type="email" class="form-control" name="email" placeholder="E-mail" required="">
+                          </div>
+                          <div class="input-group col-sm-12 input-sm">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input id="password" type="password" class="form-control" name="password" placeholder="Password" required="">
+                          </div>
+                          <div class="input-group col-sm-12 input-sm">
+                            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                          </div>
+                          </div>
+                        </form>
+                    </div>
+                  </div>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <div class="btn-group btn-group-justified">
+                    <a href="#" class="btn ">registration</a>
+                    <a href="#" class="btn ">restore password</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </header>
+  <main class="container-fluid">
+    <div id="section1" class="section align-middle top">
+      <div class="row">
+        <div class="col-xs-12 col-md-8 col-md-push-2">
+          <h2 class="section-header text-center text-uppercase lg-margin-top">Lorem ipsum dolor sit amet</h2>
+          <div class="well lg-margin-top">
+            <p class="text-justify">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <div class="row">
+              <div class="col-xs-12 col-md-4 col-md-offset-4">
+                <button type="button" class="btn btn-block btn-success" name="button">call to action!</button>
               </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-              <li><p class="navbar-text">Already have an account?</p></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
-      			<ul id="login-dp" class="dropdown-menu">
-      				<li>
-      					 <div class="row">
-      							<div class="col-md-12">
-      								Login via
-      								<div class="social-buttons">
-      									<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-      									<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
-      								</div>
-                                      or
-      								 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-      										<div class="form-group">
-      											 <label class="sr-only" for="exampleInputEmail2">Email address</label>
-      											 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-      										</div>
-      										<div class="form-group">
-      											 <label class="sr-only" for="exampleInputPassword2">Password</label>
-      											 <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                                   <div class="help-block text-right"><a href="">Forget the password ?</a></div>
-      										</div>
-      										<div class="form-group">
-      											 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-      										</div>
-      										<div class="checkbox">
-      											 <label>
-      											 <input type="checkbox"> keep me logged-in
-      											 </label>
-      										</div>
-      								 </form>
-      							</div>
-      							<div class="bottom text-center">
-      								New here ? <a href="#"><b>Join Us</b></a>
-      							</div>
-      					 </div>
-      				</li>
-      			</ul>
-              </li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
-    </header>
-    <main>
-    </main>
-    <footer>
-    </footer>
-    <!--scripts-->
-    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- bower:js -->
-    <!-- endbower -->
-    <script>window.jQuery || document.write("<script src='.\/js\/jquery.min.js'><\/script>");</script>
-    <script>$.fn.modal || document.write('<script src=".\/js\/bootstrap.min.js"><\/script>');</script>
-  </body>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="section2" class="section container services">
+      <div class="row">
+          <div class="col-xs-12 col-md-4">
+            <div class="well">
+              <a href="#" class="text-default">
+                <h3 class="service-header text-center">service-header 1</h3>
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea placeat enim optio nesciunt, qui est error atque voluptatem architecto, vero, consequatur quis ex nostrum ad similique eum vel iure voluptate.</p>
+              </a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <div class="well">
+              <a href="#" class="text-default">
+                <h3 class="service-header text-center">service-header 2</h3>
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea placeat enim optio nesciunt, qui est error atque voluptatem architecto, vero, consequatur quis ex nostrum ad similique eum vel iure voluptate.</p>
+              </a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <div class="well">
+              <a href="#" class="text-default">
+                <h3 class="service-header text-center">service-header 3</h3>
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea placeat enim optio nesciunt, qui est error atque voluptatem architecto, vero, consequatur quis ex nostrum ad similique eum vel iure voluptate.</p>
+              </a>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div id="section3" class="section container">
+      <div class="row features"></div>
+      <div class="row clients"></div>
+    </div>
+    <div id="section4" class="section container posts">
+      <div class="row">
+        <div id="posts-carousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#posts-carousel" data-slide-to="0" class=""></li>
+            <li data-target="#posts-carousel" data-slide-to="1" class=""></li>
+            <li data-target="#posts-carousel" data-slide-to="2" class="active"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item">
+              <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojN2E3YTdhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+Rmlyc3Qgc2xpZGU8L3RleHQ+PC9zdmc+">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Example headline.</h1>
+                  <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzY2NiI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNmE2YTZhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+U2Vjb25kIHNsaWRlPC90ZXh0Pjwvc3ZnPg==">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>Another example headline.</h1>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="item active">
+              <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzU1NSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNWE1YTVhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+VGhpcmQgc2xpZGU8L3RleHQ+PC9zdmc+">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1>One more for good measure.</h1>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="left carousel-control" href="#posts-carousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#posts-carousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+      <div class="row social"></div>
+    </div>
+    <div id="section5" class="section">
+      <div class="row">
+        <div class="contact-form"></div>
+        <table class="contacts"></table>
+      </div>
+    </div>
+  </main>
+  <footer>
+  </footer>
+  <!--scripts-->
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- bower:js -->
+  <!-- endbower -->
+  <script>window.jQuery || document.write("<script src='.\/js\/jquery.min.js'><\/script>");</script>
+  <script>$.fn.modal || document.write('<script src=".\/js\/bootstrap.min.js"><\/script>');</script>
+  <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+  </script>
+</body>
 </html>

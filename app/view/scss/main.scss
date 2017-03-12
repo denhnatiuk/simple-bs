@@ -1,3 +1,28 @@
-body{
-  background-color:#888;
+.navbar-header{
+  font-size: 3rem;
+  line-height: 100%;
+  margin: 0;
+  padding-right: 10px;
+  color:#ad1c4a;
+  font-weight: 700;
+  font-style: italic;
+}
+#search-dp, #login-dp{
+  min-width:320px;
+}
+.text-bold{
+  font-weight: 700;
+}
+.lg-margin-top{
+  margin-top: 20%;
+}
+.text-default{
+  text-decoration: none;
+  color:#000;
+  font-style: normal;
+}
+.text-default:hover{
+  text-decoration: none;
+  color:#000;
+  font-style: normal;
 }
