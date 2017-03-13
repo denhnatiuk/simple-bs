@@ -8,8 +8,10 @@
 
     <title></title>
     <!--stylesheets-->
-    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- fonts -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nunito" />
     <!-- bower:css -->
     <!-- endbower -->
     <!--search engines-->
@@ -61,10 +63,24 @@
               </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="btn btn-xs">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <span class="text-primary text-bold"> call to action</span>
+            <li class=" lg-margin-right">
+              <a href="#" class="dropdown-toggle btn btn-lg navbar-btn btn-success" data-toggle="dropdown">
+                <span class="text-white text-bold">request a callback</span>
               </a>
+              <ul id="callback-dp" class="dropdown-menu">
+                  <li  class=" btn-group btn-group-justified">
+                    <form class="navbar-form form-horizontal" role="callback">
+                      <div class="input-group col-sm-12 input-sm">
+                          <input type="tel" class="form-control" placeholder="type tel for callback">
+                          <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                              <span class="glyphicon glyphicon-triangle-right"></span>
+                            </button>
+                          </div>
+                        </div>
+                    </form>
+                  </li>
+                </ul>
             </li>
             <li class="divider"></li>
             <li  class="dropdown">
@@ -145,10 +161,11 @@
   </header>
   <main class="container-fluid">
     <div id="section1" class="section align-middle top">
-      <div class="row">
+      <div class="row  bg-success row-wrapper">
         <div class="col-xs-12 col-md-8 col-md-push-2">
-          <h2 class="section-header text-center text-uppercase lg-margin-top">Lorem ipsum dolor sit amet</h2>
-          <div class="well lg-margin-top">
+          <br style="clear:both;">
+          <h2 class="page-header text-center text-uppercase text-white text-shadow bg-gray-gradient lg-margin-top">Best brand ever</h2>
+          <div class="well lg-margin-top lead">
             <p class="text-justify">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
@@ -161,97 +178,308 @@
         </div>
       </div>
     </div>
-    <div id="section2" class="section container services">
-      <div class="row">
+    <div id="section2" class="section">
+      <div class="row  services bg-warning">
+        <br style="clear:both">
+        <div class="container">
           <div class="col-xs-12 col-md-4">
             <div class="well">
-              <a href="#" class="text-default">
-                <h3 class="service-header text-center">service-header 1</h3>
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea placeat enim optio nesciunt, qui est error atque voluptatem architecto, vero, consequatur quis ex nostrum ad similique eum vel iure voluptate.</p>
-              </a>
+              <h3 class="service-header text-center">service-header 1</h3>
+              <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea placeat enim optio nesciunt, qui est error atque voluptatem architecto, vero, consequatur quis ex nostrum ad similique eum vel iure voluptate. Animi, delectus vero minima porro.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ex, suscipit voluptatum numquam illum et cumque officia perferendis illo in, quidem, laudantium quia ab ipsam consequuntur deleniti sint eaque eos?</p>
+              <div class="btn-group btn-block btn-md">
+                <button type="button" class="btn btn-success">order now!</button>
+                <button class="btn btn-default" href="#service1" role="button" data-toggle="modal" data-target="#service1">View details »</button>
+              </div>
+              <!-- modal -->
+              <div class="modal fade"  id="service1" tabindex="-1" role="dialog" aria-labelledby="#service1Label" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      <h3 class="modal-title text-center" id="service1Label">service-header 1</h3>
+                    </div>
+                    <div class="modal-body text-justify">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, dicta, a. Eum, eligendi, quidem. Libero facilis, optio delectus. Accusamus odit, obcaecati quaerat ratione repudiandae culpa suscipit in illum aut magni.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-success btn-block">order now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-xs-12 col-md-4">
             <div class="well">
-              <a href="#" class="text-default">
-                <h3 class="service-header text-center">service-header 2</h3>
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea placeat enim optio nesciunt, qui est error atque voluptatem architecto, vero, consequatur quis ex nostrum ad similique eum vel iure voluptate.</p>
-              </a>
+              <h3 class="service-header text-center">service-header 2</h3>
+              <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea placeat enim optio nesciunt, qui est error atque voluptatem architecto, vero, consequatur quis ex nostrum ad similique eum vel iure voluptate. Animi, delectus vero minima porro.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ex, suscipit voluptatum numquam illum et cumque officia perferendis illo in, quidem, laudantium quia ab ipsam consequuntur deleniti sint eaque eos?</p>
+
+              <div class="btn-group btn-block btn-md">
+                <button type="button" class="btn btn-success">order now!</button>
+                <button class="btn btn-default" href="#service2" role="button" data-toggle="modal" data-target="#service2">View details »</button>
+              </div>
+              <!-- modal -->
+              <div class="modal fade"  id="service2" tabindex="-1" role="dialog" aria-labelledby="#service2Label" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      <h3 class="modal-title text-center" id="service2Label">service-header 2</h3>
+                    </div>
+                    <div class="modal-body text-justify">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, dicta, a. Eum, eligendi, quidem. Libero facilis, optio delectus. Accusamus odit, obcaecati quaerat ratione repudiandae culpa suscipit in illum aut magni.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-success btn-block">order now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-xs-12 col-md-4">
             <div class="well">
-              <a href="#" class="text-default">
                 <h3 class="service-header text-center">service-header 3</h3>
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea placeat enim optio nesciunt, qui est error atque voluptatem architecto, vero, consequatur quis ex nostrum ad similique eum vel iure voluptate.</p>
-              </a>
+                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea placeat enim optio nesciunt, qui est error atque voluptatem architecto, vero, consequatur quis ex nostrum ad similique eum vel iure voluptate. Animi, delectus vero minima porro.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam ex, suscipit voluptatum numquam illum et cumque officia perferendis illo in, quidem, laudantium quia ab ipsam consequuntur deleniti sint eaque eos?</p>
+
+                <div class="btn-group btn-block btn-md">
+                  <button type="button" class="btn btn-success">order now!</button>
+                  <button class="btn btn-default" href="#service3" role="button" data-toggle="modal" data-target="#service3">View details »</button>
+                </div>
+                <!-- modal -->
+                <div class="modal fade"  id="service3" tabindex="-1" role="dialog" aria-labelledby="#service3Label" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h3 class="modal-title text-center" id="service3Label">service-header 3</h3>
+                      </div>
+                      <div class="modal-body text-justify">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, dicta, a. Eum, eligendi, quidem. Libero facilis, optio delectus. Accusamus odit, obcaecati quaerat ratione repudiandae culpa suscipit in illum aut magni.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success btn-block">order now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row clients">
+        <h3 class="text-center">Leaders choose us</h3>
+        <div class="carousel fdi-Carousel slide" id="eventCarousel" data-interval="1">
+            <div class="carousel-inner onebyone-carosel">
+              <div class="item active">
+                <div class="col-md-4">
+                  <a href="#"><img src="http://placehold.it/250x100" class="img-responsive center-block"></a>
+                  <div class="text-center">partner 1</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-md-4">
+                  <a href="#"><img src="http://placehold.it/250x100" class="img-responsive center-block"></a>
+                  <div class="text-center">partner 2</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-md-4">
+                  <a href="#"><img src="http://placehold.it/250x100" class="img-responsive center-block"></a>
+                  <div class="text-center">partner 3</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-md-4">
+                  <a href="#"><img src="http://placehold.it/250x100" class="img-responsive center-block"></a>
+                  <div class="text-center">partner 4</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-md-4">
+                  <a href="#"><img src="http://placehold.it/250x100" class="img-responsive center-block"></a>
+                  <div class="text-center">partner 5</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-md-4">
+                  <a href="#"><img src="http://placehold.it/250x100" class="img-responsive center-block"></a>
+                  <div class="text-center">partner 6</div>
+                </div>
+              </div>
+            </div>
+            <a class="left carousel-control" href="#eventCarousel" data-slide="prev"></a>
+            <a class="right carousel-control" href="#eventCarousel" data-slide="next"></a>
+        </div>
       </div>
     </div>
     <div id="section3" class="section container">
       <div class="row features"></div>
-      <div class="row clients"></div>
     </div>
     <div id="section4" class="section container posts">
-      <div class="row">
-        <div id="posts-carousel" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#posts-carousel" data-slide-to="0" class=""></li>
-            <li data-target="#posts-carousel" data-slide-to="1" class=""></li>
-            <li data-target="#posts-carousel" data-slide-to="2" class="active"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="item">
-              <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojN2E3YTdhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+Rmlyc3Qgc2xpZGU8L3RleHQ+PC9zdmc+">
-              <div class="container">
-                <div class="carousel-caption">
-                  <h1>Example headline.</h1>
-                  <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                </div>
+      <div class="row news">
+        <div class="jumbotron">
+          <h3 class="text-center news-post-header">Some news post</h3>
+          <div class="news-tagline text-right">
+            <span class="post-date">Post date:00.00.0000</span>
+            |
+            <a href="#" class="btn btn-danger like">Like</a>
+            |
+            <a href="#" class="btn btn-warning share">share</a>
+            |
+            <a href="#" class="btn btn-success subscribe">subscribe</a>
+          </div>
+          <p class="news-post normal text-justify">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+      <div class="row follow">
+        <h3 class="text-center">Stay in touch with:</h3>
+        <div class="btn-toolbar justify-content-between center-block">
+          <div class="btn-group btn-group-justified center-block">
+            <a href="" class="btn btn-primary social-link">Facebook</a>
+            <a href="" class="btn btn-info social-link">Twitter</a>
+            <a href="" class="btn btn-danger social-link">Youtube</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div id="section5" class="section">
+      <div class="row bg-success">
+        <div class=" form-area contact-form col-xs-12 col-md-6">
+          <form role="form">
+            <br style="clear:both">
+            <h3 class="text-center ">Contact Form</h3>
+            <div class="form-group">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+            </div>
+            <button type="button" id="submit" name="submit" class="btn btn-block btn-success">Submit Form</button>
+          </form>
+        </div>
+        <div class="contacts col-xs-12 col-md-6">
+          <br style="clear:both">
+          <h3 class="office text-center">Our office</h3>
+          <table class="table table-striped lead">
+            <tbody>
+              <tr>
+                <td>sales manager</td>
+                <td><span class="glyphicon glyphicon-user"></span></td>
+                <td>John Smith</td>
+              </tr>
+              <tr>
+                <td>Tel</td>
+                <td><span class="glyphicon glyphicon-earphone"></span></td>
+                <td><a href="tel:000000000">+12 (345) 678 91 01</a></td>
+              </tr>
+              <tr>
+                <td>Е-mail</td>
+                <td><span class="glyphicon glyphicon-envelope"></span></td>
+                <td><a href="mailto:mailbox@domain">mailbox@domain</a></td>
+              </tr>
+              <tr>
+                <td>additional</td>
+                <td><span class="glyphicon glyphicon-time"></span></td>
+                <td><a href="#additional" role="button" data-toggle="modal" data-target="#additional">data</a></td>
+              </tr>
+              <tr>
+                <td>adress</td>
+                <td><span class="glyphicon glyphicon-map-marker"></span></td>
+                <td><a href="https://goo.gl/maps/3co76xfRXk62">some adress</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+        <!-- additional info modal -->
+        <div class="modal fade"  id="additional" tabindex="-1" role="dialog" aria-labelledby="#service1Label" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="modal-title text-center" id="additionalLabel">extended data</h3>
+              </div>
+              <div class="modal-body text-justify">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, dicta, a. Eum, eligendi, quidem. Libero facilis, optio delectus. Accusamus odit, obcaecati quaerat ratione repudiandae culpa suscipit in illum aut magni.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success btn-block">order now</button>
               </div>
             </div>
-            <div class="item">
-              <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzY2NiI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNmE2YTZhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+U2Vjb25kIHNsaWRlPC90ZXh0Pjwvc3ZnPg==">
-              <div class="container">
-                <div class="carousel-caption">
-                  <h1>Another example headline.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                </div>
-              </div>
+          </div>
+        </div>
+          <div class="well">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d174365.50024552827!2d31.86791387555628!3d46.93297907203769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c5cb89fb7213d5%3A0x970e39fab9e05680!2z0JzQuNC60L7Qu9Cw0ZfQsiwg0JzQuNC60L7Qu9Cw0ZfQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGM!5e0!3m2!1suk!2sua!4v1489407771641" width="100%" height="inherit" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
-            <div class="item active">
-              <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzU1NSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNWE1YTVhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+VGhpcmQgc2xpZGU8L3RleHQ+PC9zdmc+">
-              <div class="container">
-                <div class="carousel-caption">
-                  <h1>One more for good measure.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="scroll-top-wrapper ">
+    <span class="scroll-top-inner">
+      <span class="glyphicon glyphicon-menu-up"></span>
+    </span>
+  </div>
+  <footer class="footer">
+    <div class="raw  bg-primary">
+      <div class="col-xs-12 col-md-4">
+
+      </div>
+      <div class="col-xs-12 col-md-4">
+
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="copyright ">
+          <button class="btn btn-default pull-right lead" data-toggle="modal" data-target="#copyModal">
+            <span class="license">MIT license</span>
+            <span class="badge text-bold">&copy;</span>
+            <span>Den Hnatiuk</span>
+          </button>
+          <!-- modal -->
+          <div class="modal fade"  id="copyModal" tabindex="-1" role="dialog" aria-labelledby="#copyModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4 class="modal-title text-center" id="copyModalLabel">MIT License</h4>
+                </div>
+                <div class="modal-body text-justify">
+                  <p>MIT licence text</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, dicta, a. Eum, eligendi, quidem. Libero facilis, optio delectus. Accusamus odit, obcaecati quaerat ratione repudiandae culpa suscipit in illum aut magni.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
           </div>
-          <a class="left carousel-control" href="#posts-carousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-          </a>
-          <a class="right carousel-control" href="#posts-carousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
         </div>
       </div>
-      <div class="row social"></div>
     </div>
-    <div id="section5" class="section">
-      <div class="row">
-        <div class="contact-form"></div>
-        <table class="contacts"></table>
-      </div>
-    </div>
-  </main>
-  <footer>
   </footer>
+
   <!--scripts-->
   <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -263,6 +491,45 @@
     $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
     });
+    //Thanks to: http://www.webtipblog.com/adding-scroll-top-button-website/
+    $(document).ready(function(){
+      $(function(){
+          $(document).on( 'scroll', function(){
+          	if ($(window).scrollTop() > 100) {
+      			$('.scroll-top-wrapper').addClass('show');
+      		} else {
+      			$('.scroll-top-wrapper').removeClass('show');
+      		}
+      	});
+      	$('.scroll-top-wrapper').on('click', scrollToTop);
+      });
+      function scrollToTop() {
+      	verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+      	element = $('body');
+      	offset = element.offset();
+      	offsetTop = offset.top;
+      	$('html, body').animate({scrollTop: offsetTop}, 500, 'linear');
+      }
+    });
+    $(document).ready(function () {
+      $('#eventCarousel').carousel({
+          interval: 5000
+      })
+      $('.fdi-Carousel .item').each(function () {
+          var next = $(this).next();
+          if (!next.length) {
+              next = $(this).siblings(':first');
+          }
+          next.children(':first-child').clone().appendTo($(this));
+
+          if (next.next().length > 0) {
+              next.next().children(':first-child').clone().appendTo($(this));
+          }
+          else {
+              $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+          }
+      });
+  });
   </script>
 </body>
 </html>
